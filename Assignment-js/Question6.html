@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<title>Program to pass javascript function as parameter</title>
+<body>
+<script>
+
+function addStudent(id, refreshCallback)
+{
+    refreshCallback();  
+}
+
+function refreshStudentList() {
+    document.write('Hello');
+}
+
+addStudent(1, refreshStudentList);
+</script>
+
+</body>
+</html>
+

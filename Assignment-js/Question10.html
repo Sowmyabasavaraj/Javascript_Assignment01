@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<title>program to count the number of vowels in a string</title>
+<body>
+<script>
+ const vowels = ["a","e","i","o","u"];
+ 
+function countVowel(str){
+    //initialize count object
+    let countVowelObject = {
+        a:0,
+        e:0,
+        i:0,
+        o:0,
+        u:0
+    }
+ 
+    //loop through string to test if each character is a vowel
+    for(let letter of str.toLowerCase()){
+        if(vowels[0].includes(letter)){
+            countVowelObject.a = countVowelObject.a + 1;
+        }
+        if(vowels[1].includes(letter)){
+            countVowelObject.e = countVowelObject.e + 1;
+        }
+        if(vowels[2].includes(letter)){
+            countVowelObject.i = countVowelObject.i + 1;
+        }
+        if(vowels[3].includes(letter)){
+            countVowelObject.o = countVowelObject.o + 1;
+        }
+        if(vowels[4].includes(letter)){
+            countVowelObject.u = countVowelObject.u + 1;
+        }
+    }
+    for(const item in countVowelObject){
+        if(countVowelObject[item] > 0){
+            document.write(`${item.toUpperCase()}:${countVowelObject[item]} <br>`);
+        }
+    }
+}
+ 
+const string = prompt('Enter a string: ');
+countVowel(string);
+
+</script>
+
+</body>
+</html>
+

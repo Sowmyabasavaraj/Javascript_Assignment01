@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>Program to remove html/xml tags from the string</title>
+<body>
+<script>
+function strip_tags(str) {
+    if ((str===null) || (str===''))
+        return false;
+    else
+        str = str.toString();
+          
+    // Regular expression to identify HTML tags in 
+    // the input string. Replacing the identified 
+    // HTML tag with a null string.
+    return str.replace( /(<([^>]+)>)/ig, '');
+}
+document.write(strip_tags('<p><strong><em>SkillSanta Assignments</em></strong></p>'));;
+
+</script>
+
+</body>
+</html>
+
